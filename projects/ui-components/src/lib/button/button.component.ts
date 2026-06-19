@@ -29,7 +29,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
       justify-content: center;
       gap: 8px;
       border: 2px solid transparent;
-      border-radius: 6px;
+      border-radius: 999px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.15s ease;
@@ -39,7 +39,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
     }
 
     button:focus-visible {
-      outline: 3px solid #6366f1;
+      outline: 3px solid #0ea5e9;
       outline-offset: 2px;
     }
 
@@ -55,12 +55,12 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 
     /* Variants */
     .btn-primary {
-      background: #6366f1;
+      background: #0ea5e9;
       color: #fff;
-      border-color: #6366f1;
+      border-color: #0ea5e9;
     }
-    .btn-primary:hover:not(:disabled) { background: #4f46e5; border-color: #4f46e5; }
-    .btn-primary:active:not(:disabled) { background: #4338ca; }
+    .btn-primary:hover:not(:disabled) { background: #0284c7; border-color: #0284c7; }
+    .btn-primary:active:not(:disabled) { background: #0369a1; }
 
     .btn-secondary {
       background: #f1f5f9;
@@ -72,11 +72,11 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 
     .btn-outline {
       background: transparent;
-      color: #6366f1;
-      border-color: #6366f1;
+      color: #0ea5e9;
+      border-color: #0ea5e9;
     }
-    .btn-outline:hover:not(:disabled) { background: #eef2ff; }
-    .btn-outline:active:not(:disabled) { background: #e0e7ff; }
+    .btn-outline:hover:not(:disabled) { background: #e0f2fe; }
+    .btn-outline:active:not(:disabled) { background: #bae6fd; }
 
     .btn-ghost {
       background: transparent;
