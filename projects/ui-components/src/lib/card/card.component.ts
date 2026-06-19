@@ -83,6 +83,11 @@ import { CommonModule } from '@angular/common';
       line-height: 1.6;
     }
 
+    ::ng-deep p {
+      color: #475569;
+      margin: 0;
+    }
+
     .card-footer {
       padding: 14px 20px;
       border-top: 1px solid #f1f5f9;
