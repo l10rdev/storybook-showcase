@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build-storybook": "ng run ui-components:build-storybook"
+    "build-storybook": "ng run ui-components:build-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_f8d70c013075edb"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +37,7 @@
     "@storybook/blocks": "^8.6.18",
     "@storybook/test": "^8.6.18",
     "@types/jasmine": "~5.1.0",
+    "chromatic": "^17.5.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
