@@ -1,0 +1,36 @@
+name: Chromatic Visual Tests
+
+on:
+  pull_request:
+
+jobs:
+  chromatic:
+    name: Run Chromatic
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history lets Chromatic detect which stories changed
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: ui-lib/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ui-lib
+
+      - name: Build Storybook
+        run: npx ng run ui-components:build-storybook
+        working-directory: ui-lib
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: ui-lib/storybook-static
+          exitOnceUploaded: true  # don't block the workflow waiting for review
