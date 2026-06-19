@@ -25,7 +25,7 @@ import { CommonModule } from '@angular/common';
 
     .card {
       background: #fff;
-      border: 1px solid #e2e8f0;
+      border: 1px solid red;
       border-radius: 12px;
       overflow: hidden;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
