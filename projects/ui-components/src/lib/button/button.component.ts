@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 @Component({
@@ -118,7 +117,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
   `]
 })
 export class ButtonComponent {
-  @Input() variant: ButtonVariant = 'primary';
+  @Input() variant: string = 'default';
   @Input() size: ButtonSize = 'md';
   @Input() disabled = false;
   @Input() loading = false;
