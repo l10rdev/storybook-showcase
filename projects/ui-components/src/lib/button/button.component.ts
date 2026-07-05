@@ -53,13 +53,13 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
     .btn-lg { padding: 14px 24px; font-size: 16px; }
 
     /* Variants */
-    .btn-primary {
+    .btn-default {
       background: #0ea5e9;
       color: #fff;
       border-color: #0ea5e9;
     }
-    .btn-primary:hover:not(:disabled) { background: #0284c7; border-color: #0284c7; }
-    .btn-primary:active:not(:disabled) { background: #0369a1; }
+    .btn-default:hover:not(:disabled) { background: #0284c7; border-color: #0284c7; }
+    .btn-default:active:not(:disabled) { background: #0369a1; }
 
     .btn-secondary {
       background: #f1f5f9;
