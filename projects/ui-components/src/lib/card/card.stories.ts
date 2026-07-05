@@ -68,10 +68,6 @@ export const WithFooter: Story = {
     template: `
       <ui-card title="Upgrade Your Plan" [elevated]="true" [hasFooter]="true" style="max-width:360px; display:block;">
         Unlock advanced features and take your workflow to the next level.
-        <div slot="footer">
-          <ui-button variant="primary" size="sm">Upgrade Now</ui-button>
-          <ui-button variant="ghost" size="sm">Learn More</ui-button>
-        </div>
       </ui-card>
     `
   })

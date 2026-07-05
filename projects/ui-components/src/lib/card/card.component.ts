@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {ButtonComponent} from '../button/button.component';
 
 @Component({
   selector: 'ui-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonComponent],
   template: `
     <div [class]="cardClasses">
       <img *ngIf="imageSrc" [src]="imageSrc" [alt]="imageAlt" class="card-image" />
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
         <ng-content></ng-content>
       </div>
       <div *ngIf="hasFooter" class="card-footer">
-        <ng-content select="[slot=footer]"></ng-content>
+          <ui-button variant="primary" size="sm">Upgrade Now</ui-button>
+          <ui-button variant="ghost" size="sm">Learn More</ui-button>
       </div>
     </div>
   `,
@@ -25,7 +27,7 @@ import { CommonModule } from '@angular/common';
 
     .card {
       background: #fff;
-      border: 1px solid red;
+      border: 1px solid #e2e8f0;
       border-radius: 12px;
       overflow: hidden;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
@@ -81,11 +83,6 @@ import { CommonModule } from '@angular/common';
       color: #64748b;
       font-size: 14px;
       line-height: 1.6;
-    }
-
-    ::ng-deep p {
-      color: #475569;
-      margin: 0;
     }
 
     .card-footer {
