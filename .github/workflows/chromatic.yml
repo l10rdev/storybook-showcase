@@ -33,6 +33,6 @@ jobs:
           storybookBuildDir: storybook-static
           # Exit with non-zero code when there are unaccepted visual changes,
           # which causes this GitHub Actions job to fail and blocks the PR.
-          exitZeroOnChanges: false
+          exitZeroOnChanges: true
           # Do not exit immediately after upload — wait for the review verdict.
-          exitOnceUploaded: false
+          exitOnceUploaded: true
