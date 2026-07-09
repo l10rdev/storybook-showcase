@@ -62,7 +62,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
     .btn-default:active:not(:disabled) { background: #0369a1; }
 
     .btn-secondary {
-      background: #f1f5f9;
+      background: red;
       color: #334155;
       border-color: #e2e8f0;
     }
