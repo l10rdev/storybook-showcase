@@ -12,7 +12,7 @@ const meta: Meta<ButtonComponent> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'outline', 'ghost', 'danger'],
+      options: ['default', 'secondary', 'outline', 'ghost', 'danger'],
       description: 'Visual style of the button'
     },
     size: {
@@ -34,7 +34,7 @@ export default meta;
 type Story = StoryObj<ButtonComponent>;
 
 export const Primary: Story = {
-  args: { variant: 'primary', size: 'md', disabled: false, loading: false }
+  args: { variant: 'default', size: 'md', disabled: false, loading: false }
 };
 
 export const Secondary: Story = {
@@ -54,26 +54,26 @@ export const Danger: Story = {
 };
 
 export const Small: Story = {
-  args: { variant: 'primary', size: 'sm' }
+  args: { variant: 'default', size: 'sm' }
 };
 
 export const Large: Story = {
-  args: { variant: 'primary', size: 'lg' }
+  args: { variant: 'default', size: 'lg' }
 };
 
 export const Disabled: Story = {
-  args: { variant: 'primary', size: 'md', disabled: true }
+  args: { variant: 'default', size: 'md', disabled: true }
 };
 
 export const Loading: Story = {
-  args: { variant: 'primary', size: 'md', loading: true }
+  args: { variant: 'default', size: 'md', loading: true }
 };
 
 export const AllVariants: Story = {
   render: () => ({
     template: `
       <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; padding:16px;">
-        <ui-button variant="primary">Primary</ui-button>
+        <ui-button variant="default">Primary</ui-button>
         <ui-button variant="secondary">Secondary</ui-button>
         <ui-button variant="outline">Outline</ui-button>
         <ui-button variant="ghost">Ghost</ui-button>
@@ -87,9 +87,9 @@ export const AllSizes: Story = {
   render: () => ({
     template: `
       <div style="display:flex; gap:12px; align-items:center; padding:16px;">
-        <ui-button variant="primary" size="sm">Small</ui-button>
-        <ui-button variant="primary" size="md">Medium</ui-button>
-        <ui-button variant="primary" size="lg">Large</ui-button>
+        <ui-button variant="default" size="sm">Small</ui-button>
+        <ui-button variant="default" size="md">Medium</ui-button>
+        <ui-button variant="default" size="lg">Large</ui-button>
       </div>
     `
   })
@@ -99,9 +99,9 @@ export const States: Story = {
   render: () => ({
     template: `
       <div style="display:flex; gap:12px; align-items:center; padding:16px;">
-        <ui-button variant="primary">Default</ui-button>
-        <ui-button variant="primary" [disabled]="true">Disabled</ui-button>
-        <ui-button variant="primary" [loading]="true">Loading</ui-button>
+        <ui-button variant="default">Default</ui-button>
+        <ui-button variant="default" [disabled]="true">Disabled</ui-button>
+        <ui-button variant="default" [loading]="true">Loading</ui-button>
       </div>
     `
   })
